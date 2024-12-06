@@ -27,6 +27,7 @@
     ".": {
       "require": "./dist/cjs/index.js",
       "import": "./dist/esm/index.js",
+      "default": "./dist/lib/cjs/index.js",
       "types": "./dist/lib/types/index.d.ts"
     }
   },
