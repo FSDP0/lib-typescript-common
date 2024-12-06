@@ -44,8 +44,9 @@
     "git:staging": "git add .",
     "git:commit": "git commit --allow-empty -m \"[FSDP-COMM-0000] Auto Commit\"",
     "git:tagging": "git tag -f v%npm_package_version%-lw",
-    "git:push": "git push origin v%npm_package_version%-lw",
-    "git": "yarn git:staging && yarn git:commit && yarn git:tagging && yarn git:push",
+    "git:push": "git push -f origin %npm_package_config_git_branch%",
+    "git:push:tag": "git push -f origin v%npm_package_version%-lw",
+    "git": "yarn git:staging && yarn git:commit && yarn git:tagging && yarn git:push && yarn git:push:tag",
     "rmdir": "rimraf dist",
     "compile:esm": "tsc --project tsconfig.esm.json",
     "compile:cjs": "tsc --project tsconfig.cjs.json",
@@ -57,7 +58,5 @@
     "@types/node": "^22.10.1",
     "rimraf": "^6.0.1"
   },
-  "dependencies": {
-    "@fsdp0/comm": "^0.0.1"
-  }
+  "dependencies": {}
 }

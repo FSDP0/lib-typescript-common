@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@fsdp0/comm@^0.0.1":
-  version "0.0.1"
-  resolved "http://localhost:18081/repository/npm-hosted/@fsdp0/comm/-/comm-0.0.1.tgz#854ee6163f0fdffb50a70fd77e17f132ad5c3b24"
-  integrity sha512-+rqKUtbEDI/fu5qTSAPs8p6o9ocITeKtSuLJYOh4YHiksgaImxaYVbyP6MO22QTfq4OZW0IO/ErI6VtrAQjW3Q==
-
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
   resolved "http://localhost:18081/repository/npm-local/@isaacs/cliui/-/cliui-8.0.2.tgz#b37667b7bc181c168782259bab42474fbf52b550"
