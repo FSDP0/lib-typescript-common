@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    // Basic Options
+    "target": "ES6",
+
+    "allowSyntheticDefaultImports": true,
+
+    "baseUrl": "./",
+
+    "declaration": true,
+    "declarationMap": false,
+    "declarationDir": "dist/lib/types",
+    
+    "removeComments": true,
+
+    "strict": true,
+
+    /*
+    Advanced Options
+    */
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "test"]
+}
