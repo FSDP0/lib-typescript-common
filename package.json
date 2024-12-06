@@ -1,9 +1,10 @@
 {
   "name": "@fsdp0/common",
-  "version": "0.0.4",
-  "types": "dist/lib/types/index.d.ts",
+  "version": "0.0.5",
   "license": "MIT",
   "type": "module",
+  "main": "dist/lib/cjs/index.js",
+  "types": "dist/lib/types/index.d.ts",
   "author": {
     "name": "LeeGueTae",
     "email": "fsdp0dev@gmail.com",
