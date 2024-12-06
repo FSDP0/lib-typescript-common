@@ -1,8 +1,7 @@
 {
   "name": "@fsdp0/common",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
-  "type": "module",
   "main": "dist/lib/cjs/index.js",
   "types": "dist/lib/types/index.d.ts",
   "author": {
