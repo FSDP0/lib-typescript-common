@@ -1,6 +1,6 @@
 {
   "name": "@fsdp0/common",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "types": "dist/lib/types/index.d.ts",
   "license": "MIT",
   "type": "module",
@@ -44,7 +44,7 @@
     "git:staging": "git add .",
     "git:commit": "git commit --allow-empty -m \"[FSDP-COMM-0000] Auto Commit\"",
     "git:tagging": "git tag -f v%npm_package_version%-lw",
-    "git:push": "git push origin %npm_package_config_git_tag%",
+    "git:push": "git push origin v%npm_package_version%-lw",
     "git": "yarn git:staging && yarn git:commit && yarn git:tagging && yarn git:push",
     "rmdir": "rimraf dist",
     "compile:esm": "tsc --project tsconfig.esm.json",
