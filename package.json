@@ -1,6 +1,6 @@
 {
   "name": "@fsdp0/common",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "types": "dist/lib/types/index.d.ts",
   "license": "MIT",
   "type": "module",
@@ -51,7 +51,7 @@
     "compile:cjs": "tsc --project tsconfig.cjs.json",
     "compile": "yarn rmdir && yarn compile:esm && yarn compile:cjs",
     "prepublishOnly": "yarn compile",
-    "postpublish": "yarn git"
+    "postpublish": "yarn git && exit 0"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
