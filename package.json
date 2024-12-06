@@ -1,6 +1,6 @@
 {
   "name": "@fsdp0/common",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "types": "dist/lib/types/index.d.ts",
   "license": "MIT",
   "type": "module",
@@ -11,10 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/FSDP0/lib-typescript-common"
+    "url": "git+https://github.com/FSDP0/lib-typescript-common.git"
   },
   "config": {
-    "branch": "dev"
+    "git": {
+      "branch": "dev"
+    }
   },
   "publishConfig": {
     "access": "restricted"
@@ -38,17 +40,17 @@
     "custom"
   ],
   "scripts": {
+    "preversion": "git checkout %npm_package_config_git_branch%",
     "git:staging": "git add .",
     "git:commit": "git commit --allow-empty -m \"[FSDP-COMM-0000] Auto Commit\"",
-    "git:tagging": "git tag -d v%npm_package_version% && git tag v%npm_package_version%",
-    "git:tagging:display": "git show v%npm_package_version%",
-    "git:push": "git push -f origin v%npm_package_version%",
+    "git:tagging": "git tag -f v%npm_package_version%-lw",
+    "git:push": "git push origin %npm_package_config_git_tag%",
     "git": "yarn git:staging && yarn git:commit && yarn git:tagging && yarn git:push",
     "rmdir": "rimraf dist",
     "compile:esm": "tsc --project tsconfig.esm.json",
     "compile:cjs": "tsc --project tsconfig.cjs.json",
-    "build": "yarn rmdir && yarn compile:esm && yarn compile:cjs",
-    "prepublishOnly": "yarn build",
+    "compile": "yarn rmdir && yarn compile:esm && yarn compile:cjs",
+    "prepublishOnly": "yarn compile",
     "postpublish": "yarn git"
   },
   "devDependencies": {
